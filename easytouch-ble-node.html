@@ -1,0 +1,85 @@
+<script type="text/javascript">
+  RED.nodes.registerType('EasyTouch Status',{
+    category: 'EasyTouch',
+    color: '#4396c7',
+    credentials: {
+      password: {type:"password", required:true}
+    },
+    inputs:1,
+    outputs:1,
+    icon: "font-awesome/fa-thermometer-three-quarters",
+    label: function() {
+      return this.name||"EasyTouch Status";
+    }
+  });
+
+  RED.nodes.registerType('EasyTouch Update',{
+    category: 'EasyTouch',
+    color: '#4396c7',
+    credentials: {
+      password: {type:"password", required:true}
+    },
+    defaults: {
+      name: {value:"EasyTouch Update"},
+      parameter: {value:"Temperature"},
+      update: {required:true}
+    },
+    inputs:1,
+    outputs:1,
+    icon: "font-awesome/fa-thermometer-three-quarters",
+    label: function() {
+      return this.name||`EasyTouch Update ${this.parameter}`;
+    },
+    oneditprepare: function() {
+      $("#node-input-parameter").typedInput({
+        types:[{
+          value: "Output",
+          options: ["Temperature", "Power"]
+        }]
+      });
+    }
+  });
+</script>
+
+<!-- EasyTouch Status Node -->
+<script type="text/html" data-template-name="EasyTouch Status">
+  <div class="form-row">
+    <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+    <input type="text" id="node-input-name" placeholder="Name">
+  </div>
+  <div class="form-row">
+   <label for="node-input-password"><i class="fa fa-unlock-alt"></i> Device Password</label>
+   <input type="password" id="node-input-password">
+ </div>
+</script>
+
+<script type="text/html" data-help-name="EasyTouch Status">
+  <p>A simple node for getting the status of an EasyTouch RV thermostat</p>
+</script>
+
+
+<!-- EasyTouch Update Node -->
+<script type="text/html" data-template-name="EasyTouch Update">
+  <div class="form-row">
+    <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+    <input type="text" id="node-input-name" placeholder="Name">
+  </div>
+  <div class="form-row">
+    <label for="node-input-password"><i class="fa fa-unlock-alt"></i> Device Password</label>
+    <input type="password" id="node-input-password">
+  </div>
+  <div class="form-row">
+    <label for="node-input-parameter"><i class="fa fa-sitemap"></i> Parameter</label>
+    <input type="text" id="node-input-parameter">
+  </div>
+  <div class="form-row">
+    <label for="node-input-update"><i class="fa fa-file-text-o"></i> New Value</label>
+    <input type="text" id="node-input-update" placeholder="70">
+  </div>
+
+</script>
+
+<script type="text/html" data-help-name="EasyTouch Update">
+  <p>A simple node for updating the status of an EasyTouch RV thermostat</p>
+</script>
+

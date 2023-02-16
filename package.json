@@ -1,0 +1,22 @@
+{
+  "name": "@cwe7976/node-red-contrib-easytouch-ble",
+  "version": "1.0.3",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@abandonware/noble": "^1.9.2-15",
+    "commander": "^9.4.1"
+  },
+  "keywords":["node-red"],
+  "node-red" : {
+    "version": ">=3.0.0",
+    "nodes": {
+      "EasyTouch Nodes": "easytouch-ble-node.js"
+    }
+  }
+}

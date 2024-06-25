@@ -13,13 +13,13 @@
 
 Install via Node-RED Manage Palette
 
-`@cwe7976/node-red-contrib-easytouch-ble`
+`@k3vmcd/node-red-contrib-easytouch-ble`
 
 Install via npm
 
 ```
 $ cd ~/.node-red
-$ npm install @cwe7976/node-red-contrib-easytouch-ble
+$ npm install @k3vmcd/node-red-contrib-easytouch-ble
 # then restart node-red
 ```
 

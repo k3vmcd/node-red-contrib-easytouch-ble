@@ -1,6 +1,6 @@
 {
-  "name": "@cwe7976/node-red-contrib-easytouch-ble",
-  "version": "1.0.3",
+  "name": "@k3vmcd/node-red-contrib-easytouch-ble",
+  "version": "1.0.4",
   "description": "",
   "main": "index.js",
   "scripts": {

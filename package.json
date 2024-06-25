@@ -9,8 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@abandonware/noble": "^1.9.2-15",
-    "commander": "^9.4.1"
+    "@abandonware/noble": "^1.9.2-25",
+    "commander": "^12.1.0"
   },
   "keywords":["node-red"],
   "node-red" : {
